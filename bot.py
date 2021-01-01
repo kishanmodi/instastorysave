@@ -20,7 +20,7 @@ CHROMEDRIVER_PATH = 'C:\\APPDATA\\Python\\chromedriver.exe'
 chrome_options.binary_location = CHROME_PATH
 driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH,chrome_options=chrome_options)
 
-bot_token ="1416565704:AAEl52WYGzapNCSvCzWU1aD9nSgG9K_1c0o"
+bot_token ="bot_token"
 bot = telebot.TeleBot(token=bot_token)
 
 #server = Flask(__name__)
@@ -43,8 +43,8 @@ username = driver.find_element_by_name('username')
 password = driver.find_element_by_name('password')
 username.clear()
 password.clear()
-username.send_keys('cykaxdcyka')
-password.send_keys('kdm@1611')
+username.send_keys('username')
+password.send_keys('pwd')
 time.sleep(3)
 driver.find_element_by_class_name('Igw0E.IwRSH.eGOV_._4EzTm.bkEs3.CovQj.jKUp7.DhRcB').click()
 time.sleep(3)
@@ -85,7 +85,7 @@ def getMessage():
 @server.route("/")
 def webhook():
     bot.remove_webhook()
-    bot.set_webhook(url='https://ig-scrap.herokuapp.com/' + bot_token)
+    bot.set_webhook(url='https://your.herokuapp.com/' + bot_token)
     return "!", 200
 
 if __name__ == "__main__":
